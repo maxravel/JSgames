@@ -18,7 +18,7 @@ memoSub.addEventListener("click", function(){
             colorsX.push(colorsX[i]);
         }
         colorsX.sort(function() { return 0.5 - Math.random() })
-        console.log(colorsX);
+        //console.log(colorsX);
         memoP.innerHTML="";
         memoMSG.textContent = "";
         val*=2;
@@ -40,11 +40,36 @@ memoSub.addEventListener("click", function(){
             //item.style.backgroundColor = item.classList[0];
             index++;
         })
-        console.log(cards);
+        //console.log(cards);
 
+        let state = 0;
         cards.forEach(function(x){
-            x.addEventListener("click", function(){
+            x.addEventListener("click", function(e){
+                state++;
                 x.style.backgroundColor = x.classList[0];
+                if(state===1){sessionStorage.setItem("key",e.target.classList[0]);}
+                if(e.target.classList[0]===sessionStorage.getItem("key")&&state===2){
+                    console.log("winer");
+                    var removingElements = Array.prototype.slice.call(document.getElementsByClassName(sessionStorage.getItem("key")));
+                    removingElements.forEach(function(z){
+                        z.style.backgroundColor="white";
+                    })
+                    state = 0;
+                }
+                else if(e.target.classList[0]!==sessionStorage.getItem("key")&&state===2){
+                    console.log("loser");
+                    setTimeout(function(){
+                        var removingElements = Array.prototype.slice.call(document.getElementsByClassName(sessionStorage.getItem("key")));
+                        removingElements.forEach(function(z){
+                            z.style.backgroundColor="black";
+                        })
+                        e.target.style.backgroundColor = "black";
+                    },700);
+                    
+                    state = 0;
+                }
+                console.log(e.target);
+                console.log(cards);
             
             })
         })
