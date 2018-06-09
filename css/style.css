@@ -5,3 +5,19 @@
 .input{
     width:200px;
 }
+
+.box{
+    display:block;
+    margin-top:10px;
+    /* margin-right:30px; */
+    width:50vw;
+}
+
+.box>a{
+    font-size:25px;
+}
+
+.navbar{
+    display:flex;
+    flex-direction: column;
+}

@@ -12,22 +12,21 @@
   <section class="section">
     <div class="container">
       <h1 class="title">
-        JAVASCRIPT GAMES 
+        MEMO 
       </h1><br>
       <p class="subtitle">
-        This is simple site with <strong>JS games</strong>!
+        Choose number of cards pairs from <strong>2 to 10</strong>!
       </p>
-      <div class="navbar">
-            <div class="box">
-                <a href="numberGuesser.html">Number Guesser</a> 
-                <p> Simple game where you have to guess the number choosed by computer. </p>
-            </div>
-            <div class="box">
-              <a href="memo.html">Memo</a> 
-              <p> Simple game where you have to choose same color cards. </p>
-            </div>
-      </div>
+      <input class="input" type="number" placeholder="Your number..." id="memoInput"> <input type="submit" value="PLAY" class="button is-info" id="memoSubmit">
+      <p id="memoMessage"></p> 
+      <div class="memoPlace"></div>
+    
+    <div class="goBack">
+        <a class="button is-primary" href="index.html">Go back to main!</a>
+    </div>
     </div>
   </section>
+  <script src="js/mm.js">
+  </script>
   </body>
 </html>
