@@ -45,7 +45,7 @@ memoSub.addEventListener("click", function(){
         cards.forEach(function(x){
             x.addEventListener("click", function(){
                 x.style.backgroundColor = x.classList[0];
-
+            
             })
         })
 
