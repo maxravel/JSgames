@@ -1,3 +1,12 @@
+/* NAVBAR IN INDEX SECTION */
+.navbar{
+    display:flex;
+    flex-direction: column;
+}
+
+
+
+/* IN ALL SECTIONS */
 .goBack{
     margin-top:75px;
 }
@@ -6,6 +15,9 @@
     width:200px;
 }
 
+
+
+/* MEMO SECTION */
 .box{
     display:block;
     margin-top:10px;
@@ -17,7 +29,4 @@
     font-size:25px;
 }
 
-.navbar{
-    display:flex;
-    flex-direction: column;
-}
+
